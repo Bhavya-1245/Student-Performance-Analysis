@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Performance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>📊 Student Performance Dashboard</h1>
+  <p>This dashboard explores how gender, education level, and lunch type impact student scores across subjects.</p>
+
+  <div class="button-container">
+    <button onclick="updateGender('all')">All Students</button>
+    <button onclick="updateGender('female')">Female</button>
+    <button onclick="updateGender('male')">Male</button>
+  </div>
+
+  <div class="chart-title">Average Scores by Subject</div>
+  <canvas id="avgScoresChart" width="700" height="400"></canvas>
+  <div class="insight">
+    <h3>Insight:</h3>
+    <p>The average scores across subjects provide a clear picture of overall student performance. By selecting different
+      gender options, we can observe how male and female students perform in Math, Reading, and Writing.</p>
+  </div>
+
+  <div class="chart-title">Total Scores by Parental Education</div>
+  <canvas id="educationChart" width="700" height="400"></canvas>
+  <div class="insight">
+    <h3>Insight:</h3>
+    <p>This line chart illustrates the relationship between parental education levels and student performance. Higher
+      education levels often correlate with better student scores, highlighting the importance of educational support at
+      home.</p>
+  </div>
+
+  <div class="chart-title">Average Scores by Lunch Type</div>
+  <canvas id="lunchChart" width="700" height="400"></canvas>
+  <div class="insight">
+    <h3>Insight:</h3>
+    <p>This grouped bar chart compares scores based on lunch type. It can reveal how access to resources, such as
+      free/reduced lunch versus standard lunch, impacts academic performance.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
